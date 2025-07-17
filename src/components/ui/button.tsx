@@ -18,6 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Weather-themed variants
+        weather: "bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 font-medium",
+        sunny: "bg-gradient-sunny text-white hover:shadow-accent-glow transition-all duration-300 font-medium",
+        rainy: "bg-gradient-rainy text-white hover:shadow-glow transition-all duration-300 font-medium",
+        location: "bg-card text-card-foreground border border-input-border hover:bg-secondary hover:shadow-soft transition-all duration-300 font-medium",
       },
       size: {
         default: "h-10 px-4 py-2",

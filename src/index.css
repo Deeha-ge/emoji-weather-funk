@@ -2,41 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* WeatherVibe Design System - Weather-themed, vibrant color palette */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors */
+    --background: 220 100% 97%;
+    --foreground: 230 15% 15%;
 
+    /* Weather-themed primary colors */
+    --primary: 200 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 100% 70%;
+
+    /* Sunny theme colors */
+    --sunny: 45 100% 60%;
+    --sunny-light: 50 100% 80%;
+    --sunny-dark: 35 100% 50%;
+
+    /* Rainy theme colors */
+    --rainy: 220 60% 50%;
+    --rainy-light: 220 80% 70%;
+    --rainy-dark: 220 70% 35%;
+
+    /* Cloudy theme colors */
+    --cloudy: 200 20% 60%;
+    --cloudy-light: 200 30% 80%;
+    --cloudy-dark: 200 25% 40%;
+
+    /* Snowy theme colors */
+    --snowy: 200 50% 85%;
+    --snowy-accent: 210 60% 70%;
+
+    /* UI Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 230 15% 15%;
+    --card-shadow: 220 40% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --secondary: 200 100% 96%;
+    --secondary-foreground: 200 20% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 280 100% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --border: 220 20% 90%;
+    --input: 0 0% 100%;
+    --input-border: 220 30% 85%;
+    --ring: 200 100% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gradients */
+    --gradient-sunny: linear-gradient(135deg, hsl(var(--sunny)) 0%, hsl(var(--sunny-light)) 100%);
+    --gradient-rainy: linear-gradient(135deg, hsl(var(--rainy-dark)) 0%, hsl(var(--rainy)) 100%);
+    --gradient-cloudy: linear-gradient(135deg, hsl(var(--cloudy-dark)) 0%, hsl(var(--cloudy-light)) 100%);
+    --gradient-snowy: linear-gradient(135deg, hsl(var(--snowy-accent)) 0%, hsl(var(--snowy)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Shadows */
+    --shadow-soft: 0 2px 20px -5px hsl(var(--card-shadow));
+    --shadow-medium: 0 8px 30px -8px hsl(var(--card-shadow));
+    --shadow-glow: 0 0 30px -10px hsl(var(--primary-glow) / 0.3);
+    --shadow-accent-glow: 0 0 25px -8px hsl(var(--accent-glow) / 0.4);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
