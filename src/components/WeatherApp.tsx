@@ -24,7 +24,7 @@ const WeatherApp = () => {
   const { toast } = useToast();
 
   // Note: For production, you'll need to get your API key from OpenWeatherMap
-  const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with actual API key
+  const API_KEY = '54752f88ce5805ae141973176ac8b22f';
   const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
   const getWeatherEmoji = (weatherMain: string, icon: string) => {
@@ -58,16 +58,6 @@ const WeatherApp = () => {
   };
 
   const fetchWeather = async (query: string, isCoordinates = false) => {
-    if (!API_KEY || API_KEY === 'YOUR_OPENWEATHERMAP_API_KEY') {
-      setError('Please add your OpenWeatherMap API key to use the weather service.');
-      toast({
-        title: "API Key Required",
-        description: "Please add your OpenWeatherMap API key to fetch weather data.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setLoading(true);
     setError('');
 
@@ -283,27 +273,6 @@ const WeatherApp = () => {
           </Card>
         )}
 
-        {/* API Key Notice */}
-        {(!API_KEY || API_KEY === 'YOUR_OPENWEATHERMAP_API_KEY') && (
-          <Card className="bg-accent/10 border-accent/20 animate-slide-up">
-            <CardContent className="p-4">
-              <div className="text-center text-accent-foreground">
-                <p className="font-inter text-sm">
-                  🔑 To use this app, get a free API key from{' '}
-                  <a 
-                    href="https://openweathermap.org/api" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="underline font-medium hover:text-accent"
-                  >
-                    OpenWeatherMap
-                  </a>
-                  {' '}and add it to the WeatherApp component.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        )}
       </div>
     </div>
   );
